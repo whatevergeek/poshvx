@@ -1,0 +1,24 @@
+version: 6.0.0-alpha.9-{build}
+
+image: Visual Studio 2015
+
+cache:
+  - '%LocalAppData%\Microsoft\dotnet'
+
+nuget:
+  project_feed: true
+
+install:
+  - git submodule update --init
+  - ps: $buildConfiguration = 'Release'
+  - ps: Import-Module .\tools\Appveyor.psm1
+  - ps: Invoke-AppveyorInstall
+
+build_script:
+  - ps: Invoke-AppveyorBuild
+
+test_script:
+  - ps: Invoke-AppveyorTest
+
+on_finish: 
+  - ps: Invoke-AppveyorFinish

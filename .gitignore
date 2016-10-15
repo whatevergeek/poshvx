@@ -1,0 +1,60 @@
+bin/
+obj/
+project.lock.json
+*-tests.xml
+/debug/
+/staging/
+/Packages/
+
+# dotnet cli install/uninstall scripts
+dotnet-install.ps1
+dotnet-install.sh
+dotnet-uninstall-pkgs.sh
+dotnet-uninstall-debian-packages.sh
+
+# VS auto-generated solution files for project.json solutions
+*.xproj
+*.xproj.user
+*.suo
+
+# VS auto-generated files for csproj files
+*.csproj.user
+
+# Project Rider IDE files
+.idea.powershell/
+
+# Ignore executables
+*.exe
+*.msi
+*.appx
+
+# Ignore binaries and symbols
+*.pdb
+*.dll
+
+# Ignore packages
+*.deb
+*.zip
+*.rpm
+*.pkg
+
+# ignore the version file as it is generated at build time
+powershell.version
+
+# default location for produced nuget packages
+/nuget-artifacts
+
+# generated man files
+/assets/powershell.1*
+
+# resgen output
+gen
+
+# Per repo profile
+.profile.ps1
+
+#VS Code files
+.vscode
+
+# OS X
+.DS_Store
